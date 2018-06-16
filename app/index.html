@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Time calculator</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"  crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+
+  <body style="background-color:lightgrey;">
+	<div class="container" style="background-color:silver">
+		<div class="row divCss divEven">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4"><h3>Time calculator</h3></div>
+			<div class="col-sm-4"></div>
+		</div>
+		<div class="row divCss">
+			<div class="col-sm-4"><label class="control-label">Date:</label></div>
+			<div class="col-sm-4"><input type="date" class="form-control"></div>
+			<div class="col-sm-4"></div>
+		</div>
+		<div class="row divCss divEven">
+			<div class="col-sm-4"><label class="control-label">Pause:</label></div>
+			<div class="col-sm-2"><input type="text"   id="pauseHr" class="form-control"   placeholder="hr"></div>
+			<div class="col-sm-2"><input type="text"   id="pauseMin" class="form-control"  placeholder="min"></div>
+			<div class="col-sm-4"></div>
+		</div>
+		<div class="row divCss">
+			<div class="col-sm-4"><label class="control-label">Jira hors projet:</label></div>
+			<div class="col-sm-2"><input type="text"   id="j0Hr" class="form-control"  placeholder="hr"></div>
+			<div class="col-sm-2"><input type="text"   id="j0Min" class="form-control"  placeholder="min"></div>
+			<div class="col-sm-4"></div>
+		</div>
+		<div class="row divCss divEven">
+			<div class="col-sm-4"><label class="control-label">Time worked tropical:</label></div>
+			<div class="col-sm-2"><input type="text"   id="twtHr" class="form-control"  placeholder="hr"></div>
+			<div class="col-sm-2"><input type="text"   id="twtMin" class="form-control"  placeholder="min"></div>
+			<div class="col-sm-4"></div>
+		</div>
+		<div class="row divCss">
+			<div class="col-sm-4"><label class="control-label">Jira 1:</label></div>
+			<div class="col-sm-4"><input type="text" class="form-control" placeholder="Jira name"></div>
+			<div class="col-sm-2"><input type="text"   id="j1Hr" class="form-control"  placeholder="hr"></div>
+			<div class="col-sm-2"><input type="text"   id="j1Min" class="form-control"  placeholder="min"></div>
+		</div>
+		<div class="row divCss divEven">
+			<div class="col-sm-4"><label class="control-label">Jira 2:</label></div>
+			<div class="col-sm-4"><input type="text" class="form-control" placeholder="Jira name"></div>
+			<div class="col-sm-2"><input type="text"   id="j2Hr" class="form-control"  placeholder="hr"></div>
+			<div class="col-sm-2"><input type="text"   id="j2Min" class="form-control"  placeholder="min"></div>
+		</div>
+		<div class="row divCss">
+			<div class="col-sm-4"><label class="control-label">Jira 3:</label></div>
+			<div class="col-sm-4"><input type="text" class="form-control" placeholder="Jira name"></div>
+			<div class="col-sm-2"><input type="text"   id="j3Hr" class="form-control"  placeholder="hr"></div>
+			<div class="col-sm-2"><input type="text"   id="j3Min" class="form-control"  placeholder="min"></div>
+		</div>
+		<div class="row divCss divEven">
+			<div class="col-sm-4"><label class="control-label">Jira 4:</label></div>
+			<div class="col-sm-4"><input type="text" class="form-control" placeholder="Jira name"></div>
+			<div class="col-sm-2"><input type="text"   id="j4Hr" class="form-control"  placeholder="hr"></div>
+			<div class="col-sm-2"><input type="text"   id="j4Min" class="form-control"  placeholder="min"></div>
+		</div>
+		<div class="row divCss">
+			<div class="col-sm-4"><label class="control-label">Jira 5:</label></div>
+			<div class="col-sm-4"><input type="text" class="form-control" placeholder="Jira name"></div>
+			<div class="col-sm-2"><input type="text"   id="j5Hr" class="form-control"  placeholder="hr"></div>
+			<div class="col-sm-2"><input type="text"   id="j5Min" class="form-control"  placeholder="min"></div>
+		</div>
+		<div class="row divCss divEven">
+			<div class="col-sm-4"><label class="control-label">Jira 6:</label></div>
+			<div class="col-sm-4"><input type="text" class="form-control" placeholder="Jira name"></div>
+			<div class="col-sm-2"><input type="text"   id="j6Hr" class="form-control"  placeholder="hr"></div>
+			<div class="col-sm-2"><input type="text"   id="j6Min" class="form-control"  placeholder="min"></div>
+		</div>
+		<div class="row divCss">
+			<div class="col-sm-4"><label class="control-label">Total time worked(hr_min):</label></div>
+			<div class="col-sm-2"><input type="text"   id="ttwHr" class="form-control"  placeholder="hr" readonly></div>
+			<div class="col-sm-2"><input type="text"   id="ttwMin" class="form-control"  placeholder="min" readonly></div>
+			<div class="col-sm-4"></div>
+		</div>
+		<div class="row divCss divEven">
+			<div class="col-sm-4"><label class="control-label">Total time worked(hr_%):</label></div>
+			<div class="col-sm-2"><input type="text"   id="jiraHr" class="form-control"  placeholder="hr" readonly></div>
+			<div class="col-sm-2"><input type="text"   id="jiraMin" class="form-control"  placeholder="%" readonly></div>
+			<div class="col-sm-4"></div>
+		</div>
+	</div>
+  </body>
+
+</html>

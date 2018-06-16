@@ -1,0 +1,11 @@
+.container{
+	width:600px;
+	border: 2px solid red;
+}
+.divEven{	
+	background-color: lightblue;
+}
+.divCss{
+	padding-top:2px;
+	padding-bottom:2px;
+}
